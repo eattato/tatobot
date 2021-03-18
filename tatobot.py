@@ -1,8 +1,8 @@
 import discord
 import asyncio
+import os
 from discord.ext import commands
 
-botToken = "ODIwNTgxNzI1OTM5MzAyNDAy.YE3QSQ.4-K0Vnnk7ObDDW_MiRrH9241YTw"
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
@@ -90,4 +90,5 @@ async def on_message(msgContent):
 
 
 
-client.run(botToken) 
+access_token = os.environ['BOT_TOKEN']
+client.run(access_token) 
